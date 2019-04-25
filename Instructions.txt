@@ -82,3 +82,20 @@ use ApiPlatform\Core\Annotation\ApiResource;
  * @ORM\Entity(repositoryClass="App\Repository\PersonaRepository")
  */
 class Persona {}
+
+Try
+localhost:<port>/api
+----------------------------------------------
+
+----------------------------------------------
+Add ADMIN
+$ composer require admin
+
+After that Add in config/package/easy_admin.yaml
+easy_admin:
+    entities:
+       - App\Entity\ToDo
+
+Try
+localhost:<port>/admin
+----------------------------------------------
