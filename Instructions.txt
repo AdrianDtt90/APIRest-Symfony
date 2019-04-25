@@ -69,3 +69,16 @@ $ php bin/console debug:router
 
 View Services
 $ php bin/console debug:autowiring
+
+----------------------------------------------
+Add API Platform
+$ composer require api
+(if get some translation error, run $ composer require symfony/translation)
+
+After that Add in every entity
+use ApiPlatform\Core\Annotation\ApiResource;
+/**
+ * @ApiResource(iri="http://schema.org/ToDo")
+ * @ORM\Entity(repositoryClass="App\Repository\PersonaRepository")
+ */
+class Persona {}

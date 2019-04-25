@@ -3,8 +3,10 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
+ * @ApiResource(iri="http://schema.org/ToDo")
  * @ORM\Entity(repositoryClass="App\Repository\PersonaRepository")
  */
 class Persona
