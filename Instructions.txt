@@ -99,3 +99,29 @@ easy_admin:
 Try
 localhost:<port>/admin
 ----------------------------------------------
+
+----------------------------------------------
+Auth Token
+$ composer require symfony/security-bundle
+
+Add Serializer
+$ composer require symfony/serializer
+
+Add User in DataBase 
+$ php bin/console doctrine:schema:update --force
+
+Next Read
+    https://symfony.com/doc/current/security/guard_authentication.html
+or
+    https://symfony.com/doc/4.0/security/guard_authentication.html
+    https://symfony.com/doc/4.0/security/custom_provider.html
+
+If you have in config/package/security.xml
+    property: username
+You must send in the Header of your Request
+    X-AUTH-TOKEN = <username> or <token> in DataBase
+
+After that you can use the heart beating pattern for example
+
+Uncomment #anonymous: true to use it normally without auth
+----------------------------------------------
